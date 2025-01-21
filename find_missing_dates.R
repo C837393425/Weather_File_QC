@@ -55,9 +55,13 @@ find_missing_dates <- function(weather_file, ncol) {
 }
 
 
+#Example for Single File
+weather_file <- "105_306.wth" 
+ncol <- 7
 
+missing_dates <- find_missing_dates(weather_file, ncol)
 
-#Example
+#Example for weather folder
 weather_folder <- "" #path of the weather files
 weather_files <- list.files(weather_folder, pattern = "\\.wth$", full.names = TRUE)
 col_numbers = 07 #number of columns in the weather folder
