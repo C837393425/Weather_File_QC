@@ -61,7 +61,7 @@ extract_weather_file_info <- function(weather_file, ncol) {
 
 
 #Example
-weather_folder <- "N:/Research/Ogle/LandCraft/NASA_Power/DayCent_wth/07col" #path of the weather files
+weather_folder <- "" #path of the weather files
 weather_files <- list.files(weather_folder, pattern = "\\.wth$", full.names = TRUE)
 col_numbers = 07 #number of columns in the weather folder
 weather_info <- do.call(rbind, lapply(weather_files, extract_weather_file_info, ncol = col_numbers))
