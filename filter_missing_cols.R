@@ -69,7 +69,7 @@ filter_missing_cols <- function(weather_file, ncol) {
 
 
 #Example
-weather_folder <- "N:/Research/Ogle/LandCraft/NASA_Power/DayCent_wth/10col" #path of the weather files
+weather_folder <- "" #path of the weather files
 weather_files <- list.files(weather_folder, pattern = "\\.wth$", full.names = TRUE)
 col_numbers = 10 #number of columns in the weather folder
 all_missing_data <- do.call(rbind, Filter(Negate(is.null), lapply(weather_files, filter_missing_cols, ncol = col_numbers)))
