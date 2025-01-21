@@ -112,7 +112,7 @@ Returns NULL if no missing dates are found or if an error occurs.
 Usage Example:
 
 # Example usage of the functions
-weather_file <- "data/weather_sample.wth"
+weather_file <- "105_306.wth"
 ncol <- 7
 
 # Extract file info
