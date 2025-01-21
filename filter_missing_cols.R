@@ -44,7 +44,7 @@ filter_missing_cols <- function(weather_file, ncol) {
   if (length(incomplete_rows) > 0) {
     # Extract missing date and columns with missing values
     missing_info <- lapply(incomplete_rows, function(row) {
-      missing_cols <- names(weather_data)[1:10][is.na(weather_data[row, 1:ncol(weather_data)])]
+      missing_cols <- names(weather_data)[1:ncol(weather_data)][is.na(weather_data[row, 1:ncol(weather_data)])]
       data.frame(
         file_name = basename(weather_file),
         missing_date = weather_data$date[row],
