@@ -58,7 +58,7 @@ find_missing_dates <- function(weather_file, ncol) {
 
 
 #Example
-weather_folder <- "N:/Research/Ogle/LandCraft/NASA_Power/DayCent_wth/07col" #path of the weather files
+weather_folder <- "" #path of the weather files
 weather_files <- list.files(weather_folder, pattern = "\\.wth$", full.names = TRUE)
 col_numbers = 07 #number of columns in the weather folder
 missing_dates_info <- do.call(rbind, Filter(Negate(is.null), lapply(weather_files, find_missing_dates, ncol = col_numbers)))
